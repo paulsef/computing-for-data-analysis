@@ -1,4 +1,4 @@
-rankhospital <- function(state, outcome, num = "best"){
+rankHospital <- function(state, outcome, num = "best"){
   #load the data
   outcome_data <- read.csv("./data/outcome-of-care-measures.csv", 
                            colClasses = "character")
@@ -17,11 +17,14 @@ rankhospital <- function(state, outcome, num = "best"){
   else{
     stop("invalid outcome")
   }
+  #sort the data frame
   sorted_data <- outcome_data2[order(
     as.numeric(
       as.character(
         outcome_data2[,col_num]
       )), outcome_data2[,2], na.last = NA),]
+  
+  #determine which rank to return
   if (num == "best"){
     rank <- 1
   }else if (num == "worst"){

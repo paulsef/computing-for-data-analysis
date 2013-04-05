@@ -1,0 +1,7 @@
+For the third assignment in the Computing for Data Analysis course we were tasked with creating various ranking functions in R to determine which hospitals were the best/worst at treating certain conditions. Information about the data set can be found in the 'data' file in the Hospital_Revised_Flatfiles pdf. 
+
+The bestByState function takes as input one of states in the US as a string in it's two letter abbreviation (ie "TX" or "AL") and one of three outcomes passed in as a string ("heart attack","heart failure","pneumonia"). It returns the hospital with the lowest mortality rate for that condition. 
+
+The rankHospital function is similar to the bestByState function in that it takes a state and one of the three outcomes. But it also takes as input a rank either as an integer, the string "best", or the string "worst." If the user does not input a rank, the function default is "best." It then returns the corresponding hospital with that rank. For instance, calling rankHospital("AL", "heart failure", 3) will return the hospital with the third lowest mortality rate for heart failure in Alabama. 
+
+The rankAll function is also similar to the bestByState function, but takes as input the condition and a rank (with the same options and default as the rankHospital function). It returns a data frame with two columns: the hospital with the lowest mortality rate in a state for the given condition, and the corresponding state. In other words, it compiles a list of the best hospitals in each state. This function REQUIRES the bestByState function. 

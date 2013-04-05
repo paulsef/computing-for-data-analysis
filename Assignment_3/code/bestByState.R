@@ -1,4 +1,4 @@
-best2 <- function(state, outcome){
+bestByState <- function(state, outcome){
   #load in the data
   outcome_data <- read.csv("./data/outcome-of-care-measures.csv", 
                            colClasses = "character")

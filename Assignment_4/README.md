@@ -1,0 +1,5 @@
+For the fourth assignment in Computing for Data Analysis, we were tasked with creating two functions that provide information on homicide cases in the Baltimore area. The data was provided to us by the instructor but was gathered through the city of Baltimore. The information in the data set included where and when the homicide took place, the cause of death, and information on the victim. It was in the form of raw text file and read into R using the readLines function.
+
+The count function takes as input a string containing the cause of death ("asphyxiation", "blunt force", "other", "shooting", "stabbing", "unknown"). It returns an integer representing the number of homicide cases where the input was the cause of death.
+
+The ageCount function takes as input an integer representing a certain age. The function returns the number of cases where the victim was of the input age.
