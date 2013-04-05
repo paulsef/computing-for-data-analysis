@@ -1,5 +1,5 @@
 rankall <- function(outcome, num = "best"){
-  outcome_data <- read.csv("outcome-of-care-measures.csv", 
+  outcome_data <- read.csv("./data/outcome-of-care-measures.csv", 
                            colClasses = "character")
   state = unique(outcome_data[,7])
   hospital <-lapply(state, 
